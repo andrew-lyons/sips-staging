@@ -30,13 +30,13 @@ const config: GatsbyConfig = {
             name: `Biryani`,
             file: `https://fonts.googleapis.com/css2?family=Biryani&display=swap`,
           },
-          {
-            resolve: 'gatsby-plugin-manifest',
-            options: {
-              icon: 'src/assets/images/branding/symbol/Symbol_dk.png',
-            },
-          },
         ],
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-manifest',
+      options: {
+        icon: 'src/assets/images/branding/symbol/Symbol_dk.png',
       },
     },
   ]
