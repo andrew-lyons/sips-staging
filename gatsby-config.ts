@@ -3,6 +3,7 @@ import type { GatsbyConfig } from "gatsby";
 const config: GatsbyConfig = {
   siteMetadata: {
     title: `Sips Coffee Truck`,
+    siteUrl: `https://andrew-lyons.github.io/sips-staging`
   },
   pathPrefix: "/sips-staging",
   // More easily incorporate content into your pages through automatic TypeScript type generation and better GraphQL IntelliSense.
