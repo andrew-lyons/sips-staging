@@ -1,6 +1,7 @@
 import React from 'react';
 import RightArrow from '../../assets/images/arrow-right.svg';
 import './index.scss';
+import { Link } from 'gatsby';
 
 export interface ArrowCTAProps {
     href: string;
@@ -11,7 +12,7 @@ export interface ArrowCTAProps {
 
 const ArrowCTA: React.FC<ArrowCTAProps> = ({ href, text, arrow, slash=true }) => {
     return (
-        <a className='arrow-cta' href={ `${slash ? '/' : ''}${href}` }>{ text }{ arrow ? <img src={RightArrow} /> : ''}</a>
+        <Link className='arrow-cta' to={ `${slash ? '/' : ''}${href}` }>{ text }{ arrow ? <img src={RightArrow} /> : ''}</Link>
     )
 }
 

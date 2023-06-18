@@ -7,6 +7,7 @@ import Horizontal from '../../assets/images/branding/horizontal/Horizontallogo_d
 import Sticker from '../../assets/images/branding/sticker/sticker.png';
 
 import './index.scss';
+import { Link } from "gatsby";
 
 const Layout: React.FC<PropsWithChildren> = (props: PropsWithChildren) => {
 
@@ -19,9 +20,9 @@ const Layout: React.FC<PropsWithChildren> = (props: PropsWithChildren) => {
         ? (
           <nav>
             <div className="mainnavsection">
-              <a href="/">
+              <Link to="/">
                 <h3>Sips Coffee</h3>
-              </a>
+              </Link>
 
               <div className="menuicon">
                 <a onClick={() => setNavState(oldState => !oldState)}>
@@ -36,10 +37,10 @@ const Layout: React.FC<PropsWithChildren> = (props: PropsWithChildren) => {
         : (
           <nav>            
             <div className="navlinks">
-              <a href="/">Home</a>
-              <a href="/menu">Menu</a>
-              <a href="/about">About us</a>
-              <a href="/contact">Contact</a>
+              <Link to="/">Home</Link>
+              <Link to="/menu">Menu</Link>
+              <Link to="/about">About us</Link>
+              <Link to="/contact">Contact</Link>
             </div>
           </nav>
         )
@@ -48,8 +49,8 @@ const Layout: React.FC<PropsWithChildren> = (props: PropsWithChildren) => {
 
       <div className="page-content">
         <div className="sticky-socials">
-          <a href="https://www.facebook.com/sipscoffeetruck"><FaFacebookSquare /></a>
-          <a href="https://www.instagram.com/sipscoffeetruck/"><FaInstagram /></a>
+          <Link to="https://www.facebook.com/sipscoffeetruck"><FaFacebookSquare /></Link>
+          <Link to="https://www.instagram.com/sipscoffeetruck/"><FaInstagram /></Link>
         </div>
 
         { props.children }
@@ -59,11 +60,11 @@ const Layout: React.FC<PropsWithChildren> = (props: PropsWithChildren) => {
         <img src={Horizontal} />
 
         <div className="footer-linkwrapper">
-          <a href="/menu">Schedule Us</a>
+          <Link to="/menu">Schedule Us</Link>
         </div>
 
         <div className="footer-linkwrapper footer-linkwrapper-lastlink">
-          <a href="https://orders-sipscoffeetruck.square.site">Order Online</a>
+          <Link to="https://orders-sipscoffeetruck.square.site">Order Online</Link>
         </div>
 
         <img className="sticker" src={Sticker} />

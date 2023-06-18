@@ -3,6 +3,7 @@ import { FaFacebookSquare, FaInstagram } from 'react-icons/fa';
 import RightArrow from '../../assets/images/arrow-right.svg';
 import './index.scss';
 import ArrowCTA from '../ArrowCTA';
+import { Link } from 'gatsby';
 
 export interface MenuOverlayProps {
     isOpen: boolean
@@ -23,12 +24,12 @@ const MenuOverlay: React.FC<MenuOverlayProps> = ({ isOpen }) => {
                     <h2>Share on Instagram and Facebook</h2>
 
                     <div className="menuoverlay-content-socials-icons">
-                        <a href="https://www.facebook.com/sipscoffeetruck">
+                        <Link to="https://www.facebook.com/sipscoffeetruck">
                             <FaFacebookSquare />
-                        </a>
-                        <a href="https://www.instagram.com/sipscoffeetruck/">
+                        </Link>
+                        <Link to="https://www.instagram.com/sipscoffeetruck/">
                             <FaInstagram />
-                        </a>
+                        </Link>
                     </div>
                 </div>
             </div>
