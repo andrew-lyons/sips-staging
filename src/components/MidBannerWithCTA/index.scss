@@ -1,0 +1,59 @@
+@import '../../assets/global/variables';
+
+section.midbannerwithcta {
+    display: flex;
+    flex-wrap: wrap;
+
+    .banner {
+        display: flex;
+        height: 100%;
+        width: 100%;
+        padding: 16px;
+        background-size: cover;
+
+        &-inlay {
+            display: flex;
+            align-items: center;
+            background: rgba(217, 217, 217, 0.75);
+            padding: 28px 0;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .textsection {
+        padding: 32px 24px;
+
+        p {
+            letter-spacing: 0.04em;
+            margin: 0;
+        }
+    
+        a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            margin-top: 32px;
+            font-family: 'Big Shoulders Display';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 32px;
+            line-height: 38px;
+            letter-spacing: 0.16em;
+            color: $dark-primary-font;
+            text-decoration: none;
+
+            img {
+                margin-left: 12px;
+            }
+        }
+    }
+
+    @media screen and (min-width: 1024px) {
+        max-width: 650px;
+        margin: 0 auto;
+        margin-top: 96px;
+    }
+}
+

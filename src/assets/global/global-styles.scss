@@ -1,0 +1,99 @@
+@import './variables';
+
+.page-content {
+    margin-top: 60px;
+}
+
+// Typography
+h1, h2,
+h3, h4,
+h5, h6 {
+    font-family: 'Big Shoulders Display';
+    font-style: normal;
+    letter-spacing: 0.16em;
+    margin: 0;
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+
+    &.with-shadow {
+        text-shadow: 0px 0px 8px $dark-primary-font;
+    }
+}
+
+h1 {
+    font-size: 64px;
+    line-height: 77px;
+    font-weight: 800;
+    color: $dark-primary-font;
+}
+
+h2 {
+    font-size: 40px;
+    line-height: 48px;
+    font-weight: 600;
+    color: $white-background;
+}
+
+h3 {
+    font-size: 32px;
+    line-height: 38px;
+    font-weight: 600;
+    color: $dark-primary-font;
+}
+
+a, button {
+    font-family: 'Big Shoulders Display';
+    font-style: normal;
+    font-weight: 600;
+    text-align: center;
+    color: $dark-primary-font;
+    width: 100%;
+    letter-spacing: 0.16em;
+    cursor: pointer;
+}
+
+select,
+input,
+textarea {
+    font-family: 'Big Shoulders Text';
+    font-style: normal;
+    font-weight: 400;
+    text-align: center;
+    color: $dark-primary-font;
+    width: 100%;
+}
+
+p {
+    font-family: 'Biryani', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    text-align: center;
+    color: $dark-primary-font;
+    width: 100%;
+    font-size: 24px;
+    line-height: 42px;
+
+    @media screen and (min-width: 1024px) {
+        font-size: 28px;
+    }
+}
+
+a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 32px;
+    line-height: 38px;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .page-content {
+        margin-top: 138px;
+    }
+}

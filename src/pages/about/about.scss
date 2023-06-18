@@ -1,0 +1,86 @@
+main.aboutpage {
+    p {
+        font-family: 'Biryani', sans-serif;
+        padding: 0 24px;
+        width: calc(100% - 48px);
+
+        &.extra-bottom {
+            margin-bottom: 36px;
+        }
+
+        &.max-bottom {
+            margin-bottom: 64px;
+        }
+    }
+
+    > img {
+        display: block;
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+
+        &.sunrise {
+            max-width: 177px;
+        }
+
+        &.sticker {
+            max-width: 200px;
+        }
+
+        &.seal {
+            max-width: 125px;
+        }
+    }
+
+    @media screen and (min-width: 768px) {
+        max-width: 704px;
+        margin: 0 auto;
+        padding: 0 32px;
+    }
+
+    @media screen and (min-width: 1024px) {
+        max-width: 70vw;
+        padding: 0;
+
+        p {
+            max-width: 650px;
+            margin-left: auto;
+            margin-right: auto;
+
+            &.extra-bottom, &.max-bottom {
+                margin-bottom: 96px;
+            }
+        }
+
+        > img {    
+            &.sunrise {
+                margin-top: 64px;
+                margin-bottom: 64px;
+                width: 275px;
+                max-width: unset;
+            }
+
+            &.coffee {
+                margin-bottom: 64px;
+            }
+
+            &.sticker {
+                margin-top: 64px;
+                margin-bottom: 64px;
+                width: 400px;
+                max-width: unset;
+            }
+
+            &.seal {
+                width: 175px;
+                max-width: unset;
+                margin-top: 64px;
+                margin-bottom: 64px;
+            }
+        }
+    }
+
+    @media screen and (min-width: 1440px) {
+        max-width: 1008px;
+    }
+}

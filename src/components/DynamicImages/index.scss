@@ -1,0 +1,30 @@
+@import '../../assets/global/variables';
+
+section.dynamicimages {
+    display: flex;
+    flex-wrap: wrap;
+    
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    section.dynamicimages {
+        img {
+            width: 35vw;
+            height: 35vw;
+            object-fit: cover;
+        }
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    section.dynamicimages {
+        img {
+            width: 504px;
+            height: 504px;
+        }
+    }
+}

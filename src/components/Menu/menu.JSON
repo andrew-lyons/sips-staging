@@ -1,0 +1,167 @@
+{
+    "name": "Menu",
+    "categories": [
+        {
+            "drinks": [
+                {
+                    "type" : "Coffee",
+                    "list": [
+                        {
+                            "name": "Light, Medium, Dark Roasts",
+                            "price": ""
+                        },
+                        {
+                            "name": "Espresso",
+                            "price": ""
+                        },
+                        {
+                            "name": "Cappuccino",
+                            "price": ""
+                        },
+                        {
+                            "name": "Latte",
+                            "price": ""
+                        },
+                        {
+                            "name": "Iced Coffee",
+                            "price": ""
+                        },
+                        {
+                            "name": "Cold Brew",
+                            "price": ""
+                        },
+                        {
+                            "name": "Chai Lattes",
+                            "price": ""
+                        }
+                    ]
+                },
+                {
+                    "type": "Other beverages",
+                    "list": [
+                        {
+                            "name": "Lemonade",
+                            "price": ""
+                        },
+                        {
+                            "name": "Hot Cocoa",
+                            "price": ""
+                        },
+                        {
+                            "name": "Hot, Iced, Sweet Teas",
+                            "price": ""
+                        }
+                    ]
+                },
+                {
+                    "type" : "Milk Options",
+                    "list": [
+                        {
+                            "name": "Whole",
+                            "price": ""
+                        },
+                        {
+                            "name": "Skim",
+                            "price": ""
+                        },
+                        {
+                            "name": "Almond",
+                            "price": ""
+                        },
+                        {
+                            "name": "Soy",
+                            "price": ""
+                        },
+                        {
+                            "name": "Oats",
+                            "price": ""
+                        }
+                    ]
+                },
+                {
+                    "type" : "Syrup and Extras",
+                    "list": [
+                        {
+                            "name": "Vanilla",
+                            "price": ""
+                        },
+                        {
+                            "name": "Chocolate",
+                            "price": ""
+                        },
+                        {
+                            "name": "Caramel",
+                            "price": ""
+                        },
+                        {
+                            "name": "Peppermint",
+                            "price": ""
+                        },
+                        {
+                            "name": "Honey",
+                            "price": ""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "eats": [
+                {
+                    "type" : "Pastries and Sweets",
+                    "list": [
+                        {
+                            "name": "Cinnamon Rolls",
+                            "price": ""
+                        },
+                        {
+                            "name": "Chocolate Chip Cookie",
+                            "price": ""
+                        },
+                        {
+                            "name": "Macadamia Cookie",
+                            "price": ""
+                        },
+                        {
+                            "name": "Brownie",
+                            "price": ""
+                        }
+                    ]
+                },
+                {
+                    "type" : "Some Other Food",
+                    "list": [
+                        {
+                            "name": "Cinnamon Rolls",
+                            "price": ""
+                        },
+                        {
+                            "name": "Chocolate Chip Cookie",
+                            "price": ""
+                        },
+                        {
+                            "name": "Macadamia Cookie",
+                            "price": ""
+                        },
+                        {
+                            "name": "Brownie",
+                            "price": ""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "gifts": [
+                {
+                    "name": "Gift Cards",
+                    "price": ""
+                },
+                {
+                    "name": "Pay it Forward",
+                    "price": ""
+                }
+            ]
+        }
+    ]
+}

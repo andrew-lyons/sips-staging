@@ -1,0 +1,60 @@
+@import '../assets/global/variables';
+
+main.homepage {
+    div.main-section {
+        margin-bottom: 48px;
+
+        img.main-logo {
+            width: 67vw;
+            height: auto;
+            margin: 96px auto 36px;
+            display: block;
+        }
+    
+        a.arrow-cta {
+            margin-bottom: 16px;
+        }
+    }
+
+    @media screen and (min-width: 768px) {
+        max-width: 704px;
+        margin: 0 auto;
+        padding: 0 32px;
+
+        div.main-section {
+            img.main-logo {
+                width: 40vw;
+            }
+        }
+    }
+
+    @media screen and (min-width: 1024px) {
+        padding: 0;
+        max-width: 70vw;
+
+        .homepage-extrapadding {
+            display: flex;
+            gap: 8.82vw;
+            margin-top: 64px;
+        }
+
+        div.main-section {
+            img.main-logo {
+                width: 428px;
+                margin-bottom: 64px;
+            }
+
+            a.arrow-cta {
+                margin-bottom: 24px;
+            }
+        }
+    }
+
+    @media screen and (min-width: 1440px) {
+        max-width: 1008px;
+    
+        .homepage-extrapadding {
+            gap: 127px;
+        }
+    }
+}
