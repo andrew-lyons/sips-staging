@@ -12,7 +12,7 @@
     height: calc(100vh - 230px);
     z-index: 9999;
     top: calc(-100vh);
-    padding: 115px 24px 64px;
+    padding: 115px 24px 300px;
     transition: top 0.5s cubic-bezier(.57,.15,.27,.99);
 
     &-opened {
