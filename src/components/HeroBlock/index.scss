@@ -9,6 +9,8 @@ section.heroblock {
     h1 {
         color: $white-background;
         text-shadow: 0px 0px 8px $dark-primary-font;
+        width: 80%;
+        margin: 0 auto;
     }
 
     @media screen and (min-width: 768px) {
