@@ -17,6 +17,17 @@ main.contactpage {
             max-width: 64px;
             margin: 36px auto;
         }
+
+        &.logotype {
+          max-width: 250px;
+          margin: 36px auto;
+        }
+
+        &.symbol {
+          max-width: 250px;
+          margin: 36px auto;
+          padding-left: 44px;
+        }
     }
 
     p {
@@ -52,11 +63,6 @@ main.contactpage {
             &.horizontal {
                 width: 725px;
                 max-width: unset;
-            }
-
-            &.sun-icon {
-                margin-top: 96px;
-                margin-bottom: 0;
             }
         }
     }

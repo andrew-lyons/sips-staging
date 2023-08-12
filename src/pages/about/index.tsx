@@ -2,10 +2,11 @@ import * as React from "react"
 import type { HeadFC, PageProps } from "gatsby"
 
 import Sips9 from '../../assets/images/figmasips9.png';
-import Coffee from '../../assets/images/coffeecup.png';
 import Sunrise from '../../assets/images/branding/tagline-sun/Tagline_sun_dk.png';
 import Sticker from '../../assets/images/branding/sticker/sticker.png';
 import Seal from '../../assets/images/branding/seal/Seal_dk.png';
+
+import GeneralContactForm from "../../components/GeneralContactForm";
 
 import Layout from "../../components/Layout"
 import HeroBlock from "../../components/HeroBlock";
@@ -14,6 +15,11 @@ import HeroBlock from "../../components/HeroBlock";
 import './about.scss';
 
 const AboutPage: React.FC<PageProps> = () => {
+  const headBlock = (
+    <div>
+      <h3>Contact Us</h3>
+    </div>
+  );
 
   React.useEffect(() => {
     window.scrollTo(0, 0)
@@ -24,29 +30,25 @@ const AboutPage: React.FC<PageProps> = () => {
       <main className="aboutpage">
         <HeroBlock image={Sips9} text='About Us' specialStyles={{ backgroundPosition: '45%' }} />
 
-        <p>Sips Coffee Truck is a coffee experience for all.</p>
+        <p>At SIPS Coffee Truck, we live by the motto of "brewing community."</p>
 
         <img className="sunrise" src={Sunrise} />
 
-        <p className="extra-bottom">Our mission is to provide our customers with high-quality beverages and local baked goods that make each day a bit brighter.</p>
+        <p>We aim to provide more than just a cup of coffee.</p>
 
-        <img className="coffee" src={Coffee} />
-
-        <p>We offer fun, handcrafted espresso-based drinks, teas and other caffeinated options to help you kickstart your day or beat afternoon blues - as well as non-caffeinated refreshments.</p>
-
-        <p>We want to support small businesses by serving delicious treats from talented local bakers.</p>
-
-        <img className="sticker" src={Sticker} />
-
-        <p>Whether you need an expertly crafted latte for your morning commute or just a friendly conversation over herbal tea – this truck’s got it covered!</p>
+        <p>We are committed to creating a warm, welcoming environment that fosters meaningful connections and relationships within our community.</p>
 
         <img className="seal" src={Seal} />
 
-        <p>Our vision is to become the go-to destination for those wishing to relax, socialize, get energized and unwind during their daily ongoings.</p>
+        <p>Our passion lies not only in the quality and taste of our handcrafted drinks but in the experiences we provide to our community.</p>
+        
+        <p>We take pride in offering unique and fun drinks made with the utmost care and attention; from our signature lattes to our energy refreshers & iced teas, we promise to provide an unforgettable coffee truck experience.</p>
 
-        <p>Join us soon at Sips Coffee Truck –</p>
+        <img className="sticker" src={Sticker} />
 
-        <p className="max-bottom">where great coffee meets community spirit!</p>
+        <p>We believe that coffee connects people.</p>
+
+        <GeneralContactForm headBlock={headBlock} includeName={false} includePhone={false} />
       </main>
     </Layout>
   )
