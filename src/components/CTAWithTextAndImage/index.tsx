@@ -6,27 +6,27 @@ import ArrowCTA from '../ArrowCTA';
 import './index.scss';
 
 export interface CTAWithTextAndImageProps {
-    linkText: string;
-    linkHref: string;
-    includeArrow: boolean;
-    text: string;
-    image: string;
-    noTopPadding?: boolean;
+  linkText: string;
+  linkHref: string;
+  includeArrow: boolean;
+  text: string;
+  image: string;
+  noTopPadding?: boolean;
 }
 
 const CTAWithTextAndImage: React.FC<CTAWithTextAndImageProps> = ({ linkText, linkHref, includeArrow, text, image, noTopPadding }) => {
 
-    return (
-        <section className='ctawithtextandimage' style={{paddingTop: noTopPadding ? 0 : ''}}>
-            <div className="ctatext">
-                <ArrowCTA href={linkHref} text={linkText} arrow={includeArrow} />
+  return (
+    <section className='ctawithtextandimage' style={{ paddingTop: noTopPadding ? 0 : '' }}>
+      <div className="ctatext">
+        <ArrowCTA href={linkHref} text={linkText} arrow={includeArrow} />
 
-                <p>{ text }</p>
-            </div>
+        <p>{text}</p>
+      </div>
 
-            <img src={image} />
-        </section>
-    )
+      <img src={image} />
+    </section>
+  )
 }
 
 export default CTAWithTextAndImage;

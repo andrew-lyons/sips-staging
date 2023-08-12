@@ -6,8 +6,8 @@ import DynamicImages from "../components/DynamicImages";
 import CTAWithTextAndImage from "../components/CTAWithTextAndImage";
 import GeneralContactForm from "../components/GeneralContactForm";
 
-import MenuPNG from '../assets/images/ctamenu.png';
-import ManInWindow from '../assets/images/maninwindow.png';
+import Sips5 from '../assets/images/figmasips5.png';
+import Sips6 from '../assets/images/figmasips6.png';
 import MainLogo from '../assets/images/branding/main-logo/Mainlogo_dk.png';
 
 import './index.scss';
@@ -37,9 +37,9 @@ const IndexPage: React.FC<PageProps> = () => {
         <DynamicImages />
       
         <div className="homepage-extrapadding">
-          <CTAWithTextAndImage linkText="Our Menu" linkHref="menu" includeArrow image={MenuPNG} text="Coffee, espresso, cinnamon rolls and more !" />
+          <CTAWithTextAndImage linkText="Our Menu" linkHref="menu" includeArrow image={Sips5} text="Coffee, espresso, cinnamon rolls and more !" />
 
-          <CTAWithTextAndImage linkText="Schedule Us" linkHref="menu" includeArrow image={ManInWindow} noTopPadding={true} text="For your next event, craft show, wedding..." />
+          <CTAWithTextAndImage linkText="Schedule Us" linkHref="menu" includeArrow image={Sips6} noTopPadding={true} text="For your next event, craft show, wedding..." />
         </div>
 
         <GeneralContactForm headBlock={headBlock} includeName={false} includePhone={false} />

@@ -1,7 +1,7 @@
 import * as React from "react"
 import type { HeadFC, PageProps } from "gatsby"
 
-import AboutUsHero from '../../assets/images/aboutushero.png';
+import Sips9 from '../../assets/images/figmasips9.png';
 import Coffee from '../../assets/images/coffeecup.png';
 import Sunrise from '../../assets/images/branding/tagline-sun/Tagline_sun_dk.png';
 import Sticker from '../../assets/images/branding/sticker/sticker.png';
@@ -22,14 +22,14 @@ const AboutPage: React.FC<PageProps> = () => {
   return (
     <Layout>
       <main className="aboutpage">
-        <HeroBlock image={AboutUsHero} text='About Us' />
+        <HeroBlock image={Sips9} text='About Us' specialStyles={{ backgroundPosition: '45%' }} />
 
         <p>Sips Coffee Truck is a coffee experience for all.</p>
 
         <img className="sunrise" src={Sunrise} />
 
         <p className="extra-bottom">Our mission is to provide our customers with high-quality beverages and local baked goods that make each day a bit brighter.</p>
-      
+
         <img className="coffee" src={Coffee} />
 
         <p>We offer fun, handcrafted espresso-based drinks, teas and other caffeinated options to help you kickstart your day or beat afternoon blues - as well as non-caffeinated refreshments.</p>
@@ -45,7 +45,7 @@ const AboutPage: React.FC<PageProps> = () => {
         <p>Our vision is to become the go-to destination for those wishing to relax, socialize, get energized and unwind during their daily ongoings.</p>
 
         <p>Join us soon at Sips Coffee Truck –</p>
-        
+
         <p className="max-bottom">where great coffee meets community spirit!</p>
       </main>
     </Layout>

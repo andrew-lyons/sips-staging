@@ -1,104 +1,54 @@
-import React from 'react'
-
-import menu from "./menu.json"
+import React, { useEffect, useState } from 'react'
 import './index.scss';
 
+export interface MenuCategory {
+  name: string
+  items: string[]
+}
 
 const Menu: React.FC = () => {
+  const [menuResult, setMenuResult] = useState<MenuCategory[]>([]);
+  const [smallMenuGroups, setSmallMenuGroups] = useState<MenuCategory[]>([]);
+
+  useEffect(() => {
+    fetch('https://sips-email-server.vercel.app/api/catalog')
+    .then((response) => response.json())
+    .then((data: { result: MenuCategory[] }) => {
+      const { result } = data;
+      result.sort((a, b) => b.items.length - a.items.length);
+      const biggerResults = result.filter(f => f.items.length > 2);
+      const smallerResults = result.filter(f => f.items.length <= 2);
+      setMenuResult(biggerResults);
+      setSmallMenuGroups(smallerResults);
+    });
+  }, [])
+
   return (
     <section className='menu'>
-      <h2>Menu</h2>
-
-      <div className='menu-topnav'>
-        <div>
-          <a href="#drinks">Drinks</a>
-          <a href="#eats">Eats</a>
-          <a href="#gifts">Gifts</a>
-        </div>
-      </div>
-
-      <div id='drinks' className='section-header'>
-        <h3>Drinks</h3>
-        <div />
-      </div>
+      <h2 className='menu-title'>Menu</h2>
 
       <div className='menu-section-wrapper'>
-        <div className='menu-section'>
-          <h3>Coffee</h3>
+        { menuResult.map((r: { name: string, items: string[] }, idx) => {
+          return (
+            <div key={`${r.name}-menusection-${idx}`} className='menu-section'>
+              <h3>{ r.name }</h3>
 
-          <p>Light, Medium, Dark Roasts</p>
-          <p>Espresso</p>
-          <p>Cappuccino</p>
-          <p>Latte</p>
-          <p>Iced Coffee</p>
-          <p>Cold Brew</p>
-          <p>Chai Lattes</p>
-        </div>
-
-        <div className='menu-section'>
-          <h3>Other Beverages</h3>
-
-          <p>Lemonade</p>
-          <p>Hot Cocoa</p>
-          <p>Hot, Iced, Sweet Teas</p>
-        </div>
-
-        <div className='menu-section'>
-          <h3>Milk Options</h3>
-
-          <p>Whole</p>
-          <p>Skim</p>
-          <p>Almond</p>
-          <p>Soy</p>
-          <p>Oat</p>
-        </div>
-
-        <div className='menu-section'>
-          <h3>SYRUPS & EXTRAS</h3>
-
-          <p>Vanilla</p>
-          <p>Chocolate</p>
-          <p>Caramel</p>
-          <p>Peppermint</p>
-          <p>Honey</p>
-        </div>
+              { r.items.map((i, itemIdx)=> {
+                return (
+                  <p key={`${i}-item-${itemIdx}`}>{ i }</p>
+                )
+              })}
+            </div>
+          )
+        })}
       </div>
 
-      <div id="eats" className='section-header'>
-        <h3 id='drinks'>Eats</h3>
-        <div />
-      </div>
+      <h2 className='menu-title'>Also...</h2>
 
-      <div className='menu-section-wrapper'>
-        <div className='menu-section'>
-          <h3>PASTRIES & SWEETS</h3>
-
-          <p>Cinnamon Rolls</p>
-          <p>Chocolate Chip Cookie</p>
-          <p>Macadamia Cookie</p>
-          <p>Brownie</p>
-        </div>
-
-        <div className='menu-section'>
-          <h3>SOME OTHER FOOD?</h3>
-
-          <p>Cinnamon Rolls</p>
-          <p>Chocolate Chip Cookie</p>
-          <p>Macadamia Cookie</p>
-          <p>Brownie</p>
-        </div>
-      </div>
-
-      <div id="gifts" className='section-header'>
-        <h3 id='drinks'>Gifts</h3>
-        <div />
-      </div>
-
-      <div className='menu-section'>
-        <p>Gift Cards</p>
-        <p>Pay It Forward</p>
-        <p>Lorem Ipsum</p>
-        <p>Dolor Amet</p>
+      <div className='menu-section-wrapper menu-section-wrapper-smallerwrapper'>
+        { smallMenuGroups.map((r: { name: string, items: string[] }, idx) => 
+          <h3 className='menu-section-wrapper-smaller' key={`${r.name}-alsosection-${idx}`}>{ r.name }</h3>
+        )}
       </div>
     </section>
   )

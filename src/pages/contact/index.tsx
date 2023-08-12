@@ -2,7 +2,7 @@ import * as React from "react"
 import type { HeadFC, PageProps } from "gatsby"
 
 import MidBannerImage from '../../assets/images/midbanner.png';
-import ContactHero from '../../assets/images/contacthero.png';
+import Sips8 from '../../assets/images/figmasips8.png';
 import Horizontal from '../../assets/images/branding/horizontal/Horizontallogo_dk.png';
 import GraniteIcon from '../../assets/images/branding/icons/icons_granite_solo.png';
 
@@ -20,8 +20,6 @@ const ContactPage: React.FC<PageProps> = () => {
     window.scrollTo(0, 0)
   }, [])
 
-  const text = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce rhoncus ipsum ut eros suscipit placerat. Ut facilisis, ipsum at vestibulum placerat, justo velit aliquet libero, vel euismod lorem est at neque. Duis accumsan viverra libero, ac aliquet nibh viverra nec.';
-
   const headBlock = (
     <div>
       <p>Send us a message and we’ll get back with you!</p>
@@ -33,7 +31,7 @@ const ContactPage: React.FC<PageProps> = () => {
   return (
     <Layout>
       <main className="contactpage">
-        <HeroBlock image={ContactHero} text='Get in touch' />
+        <HeroBlock image={Sips8} text='Get in touch' specialStyles={{ backgroundPosition: '18%' }} />
 
         <img className="horizontal" src={Horizontal} />
 
@@ -49,7 +47,7 @@ const ContactPage: React.FC<PageProps> = () => {
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce rhoncus ipsum ut eros suscipit placerat. Ut facilisis, ipsum at vestibulum placerat, justo velit aliquet libero, vel euismod lorem est at neque.</p>
         <ArrowCTA arrow href="#" text="Our Schedule" />
 
-        <img className="sun-icon" src={GraniteIcon} /> 
+        <img className="sun-icon" src={GraniteIcon} />
 
         <GeneralContactForm headBlock={headBlock} />
 

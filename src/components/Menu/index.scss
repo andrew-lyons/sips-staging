@@ -6,51 +6,58 @@ section.menu {
     margin-top: 52px;
   }
 
-  .menu-topnav {
-    display: flex;
-    justify-content: center;
-    margin: 24px auto 36px;
-    border-bottom: 1px solid #444444;
-    max-width: 430px;
-
-    > div {
+  .menu {
+    &-topnav {
       display: flex;
-      border-top: 1px solid #444444;
-
-      a {
-        width: unset;
-        position: relative;
-        margin: 12px 16px;
-        font-size: 30px;
-        line-height: 1;
-        text-transform: uppercase;
-        font-family: 'Big Shoulders Display';
-        justify-content: center;
+      justify-content: center;
+      margin: 24px auto 36px;
+      border-bottom: 1px solid #444444;
+      max-width: 430px;
   
-        &:first-child {
-          margin-left: 0;
-        }
+      > div {
+        display: flex;
+        border-top: 1px solid #444444;
   
-        &:last-child {
-          margin-right: 0;
-  
-          &::after {
-            display: none !important;
+        a {
+          width: unset;
+          position: relative;
+          margin: 12px 16px;
+          font-size: 30px;
+          line-height: 1;
+          text-transform: uppercase;
+          font-family: 'Big Shoulders Display';
+          justify-content: center;
+    
+          &:first-child {
+            margin-left: 0;
           }
-        }
-  
-        &::after {
-          position: absolute;
-          content: '';
-          top: 0;
-          right: -16px;
-          width: 1px;
-          height: 30px;
-          background-color: #444444;
+    
+          &:last-child {
+            margin-right: 0;
+    
+            &::after {
+              display: none !important;
+            }
+          }
+    
+          &::after {
+            position: absolute;
+            content: '';
+            top: 0;
+            right: -16px;
+            width: 1px;
+            height: 30px;
+            background-color: #444444;
+          }
         }
       }
     }
+
+    &-title {
+      margin-bottom: 52px;
+    }
   }
+  
 
   div.section-header {
     display: flex;
@@ -97,6 +104,20 @@ section.menu {
       
       &:last-child {
         margin-bottom: 0;
+      }
+    }
+
+    &-wrapper {
+      &-smallerwrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: left !important;
+      }
+
+      h3.menu-section-wrapper-smaller {
+        margin-bottom: 24px;
+        width: 50%;
+        text-align: left;
       }
     }
   }
